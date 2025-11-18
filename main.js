@@ -24,5 +24,10 @@ const getWeather = (city) => {
           <span>${jsonData.current.condition.text}</span>
       </div>
     `;
-    });
+    })
+    .catch((err) =>
+      alert(
+        'エラーが発生しました。ページをリロードして、もう一度トライしてください。'
+      )
+    );
 };
